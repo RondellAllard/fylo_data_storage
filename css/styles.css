@@ -1,0 +1,98 @@
+:root {
+  --main-bg-clr: rgb(65, 20, 136);
+  --sec-bg-clr: rgb(7, 1, 34);
+}
+
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styling */
+body {
+  background: top / cover no-repeat url("../img/bg-mobile.png");
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+  width: 350px;
+  height: 20%;
+  margin: 10px;
+}
+
+.nav_section {
+  background-color: var(--main-bg-clr);
+  padding: 2rem;
+  border-radius: 5px 50px 5px 5px;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+  background: var(--sec-bg-clr);
+  padding: 0.25rem;
+  margin: 0.5rem;
+}
+
+.storage_data {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--main-bg-clr);
+  padding: 2rem;
+  border-radius: 5px 5px 5px 5px;
+  color: #fff;
+}
+
+.lead {
+  width: 100%;
+  text-align: center;
+}
+
+progress {
+  width: 100%;
+}
+
+.bottom_range,
+.top_range {
+  width: 49%;
+}
+
+.top_range {
+  text-align: right;
+  margin-left: auto;
+}
+
+.space_left {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  height: 5rem;
+  width: 10rem;
+  margin: auto;
+  right: 100px;
+  bottom: -2.5rem;
+  color: black;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.space_left p {
+  font-size: 1rem;
+}
+
+.space_left p span {
+  font-size: 2rem;
+}

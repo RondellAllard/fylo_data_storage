@@ -6,5 +6,32 @@
     <link rel="stylesheet" href="css/styles.css" />
     <title>Flyo Data Storage</title>
   </head>
-  <body></body>
+  <body>
+    <section class="nav_section">
+      <img src="img/logo.svg" alt="Flyo logo" />
+      <nav>
+        <ul>
+          <li>
+            <a href="#"><img src="img/icon-document.svg" alt="documents" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="img/icon-folder.svg" alt="files" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="img/icon-upload.svg" alt="upload" /></a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <section class="storage_data">
+      <p class="lead">You've used <b>815GB</b> of your storage</p>
+
+      <progress id="file" max="100" value="70">70%</progress>
+      <p class="bottom_range">0 GB</p>
+      <p class="top_range">1000 GB</p>
+      <div class="space_left">
+        <p><span>185</span> GB left</p>
+      </div>
+    </section>
+  </body>
 </html>
