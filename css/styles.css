@@ -16,21 +16,22 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 section {
   width: 350px;
-  height: 20%;
+  max-width: 90%;
+  height: 30%;
   margin: 10px;
 }
 
 .nav_section {
   background-color: var(--main-bg-clr);
+  margin-top: 30%;
   padding: 2rem;
-  border-radius: 5px 50px 5px 5px;
+  border-radius: 5px 100px 5px 5px;
 }
 
 ul {
@@ -47,6 +48,7 @@ li {
 .storage_data {
   position: relative;
   display: flex;
+  height: 25%;
   flex-wrap: wrap;
   background-color: var(--main-bg-clr);
   padding: 2rem;
@@ -59,8 +61,10 @@ li {
   text-align: center;
 }
 
-progress {
+progress[value] {
   width: 100%;
+  height: 25px;
+  background-color: grey;
 }
 
 .bottom_range,
