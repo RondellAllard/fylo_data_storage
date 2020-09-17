@@ -6,8 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 320px;
-  max-width: 90%;
+
   background-color: $main-bg-color;
   margin: 0.5rem;
   .logo {
@@ -15,8 +14,15 @@
     margin-bottom: 2rem;
   }
   &_nav {
+    width: 320px;
     padding: 2rem;
     border-radius: 5px 100px 5px 5px;
+    @media (min-width: $desktop-bp) {
+      max-width: 320px;
+      flex-grow: 1;
+      margin-left: 2rem;
+      margin-right: 0.5rem;
+    }
     ul {
       display: flex;
     }
@@ -33,15 +39,21 @@
   }
   &_data {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    width: 320px;
     padding: 2rem;
     border-radius: 5px 5px 5px 5px;
     color: $white-color;
+    @media (min-width: $desktop-bp) {
+      width: 50%;
+      max-width: 720px;
+      flex-grow: 1;
+      margin-right: 2rem;
+    }
     .lead {
-      align-self: center;
       margin-bottom: 2rem;
+      @media (min-width: $desktop-bp) {
+        align-self: flex-start;
+      }
     }
     .progress {
       margin-bottom: 1rem;
@@ -61,17 +73,43 @@
       }
     }
     .capacity_remaining {
-      z-index: 100;
       position: absolute;
-      right: 50;
+      right: 80px;
       bottom: -2rem;
       display: flex;
       justify-content: center;
-      width: 50%;
+      width: 10rem;
       padding: 1rem;
       border-radius: 10px;
       background-color: $white-color;
       border: solid #000 1px;
+      @media (min-width: $desktop-bp) {
+        top: -2rem;
+        bottom: auto;
+
+        &::after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid black;
+        }
+        &::before {
+          content: "test";
+          position: absolute;
+          top: 3rem;
+          right: 30px;
+
+          width: 0;
+          height: 0;
+
+          background-color: $white-color;
+          border-top: 8px solid transparent;
+          border-bottom: 8px solid transparent;
+          border-bottom: 15px solid #000;
+        }
+      }
       p {
         font-size: 0.75rem;
         color: $grayscale-color;

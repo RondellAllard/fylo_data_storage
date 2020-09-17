@@ -19,4 +19,8 @@ body {
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: $white-color;
+  @media (min-width: $desktop-bp) {
+    flex-direction: row;
+    background: top / cover no-repeat url("../../img/bg-desktop.png");
+  }
 }

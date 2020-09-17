@@ -174,3 +174,25 @@ body {
     );
   }
 }
+.dog {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  background-color: #fff;
+}
+
+.dog::before {
+  content: "test";
+  display: block;
+  position: absolute;
+  top: -3rem;
+  right: 30px;
+
+  width: 0;
+  height: 0;
+
+  background-color: #fff;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-bottom: 15px solid #000;
+}

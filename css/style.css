@@ -366,13 +366,17 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
 }
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
+    background: top/cover no-repeat url("../../img/bg-desktop.png");
+  }
+}
 
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 320px;
-  max-width: 90%;
   background-color: #1e2c69;
   margin: 0.5rem;
 }
@@ -381,8 +385,17 @@ body {
   margin-bottom: 2rem;
 }
 .card_nav {
+  width: 320px;
   padding: 2rem;
   border-radius: 5px 100px 5px 5px;
+}
+@media (min-width: 768px) {
+  .card_nav {
+    max-width: 320px;
+    flex-grow: 1;
+    margin-left: 2rem;
+    margin-right: 0.5rem;
+  }
 }
 .card_nav ul {
   display: flex;
@@ -399,16 +412,26 @@ body {
 }
 .card_data {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 320px;
   padding: 2rem;
   border-radius: 5px 5px 5px 5px;
   color: #fff;
 }
+@media (min-width: 768px) {
+  .card_data {
+    width: 50%;
+    max-width: 720px;
+    flex-grow: 1;
+    margin-right: 2rem;
+  }
+}
 .card_data .lead {
-  align-self: center;
   margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .card_data .lead {
+    align-self: flex-start;
+  }
 }
 .card_data .progress {
   margin-bottom: 1rem;
@@ -428,17 +451,42 @@ body {
   align-self: end;
 }
 .card_data .capacity_remaining {
-  z-index: 100;
   position: absolute;
-  right: 50;
+  right: 80px;
   bottom: -2rem;
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 10rem;
   padding: 1rem;
   border-radius: 10px;
   background-color: #fff;
   border: solid #000 1px;
+}
+@media (min-width: 768px) {
+  .card_data .capacity_remaining {
+    top: -2rem;
+    bottom: auto;
+  }
+  .card_data .capacity_remaining::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
+  }
+  .card_data .capacity_remaining::before {
+    content: "test";
+    position: absolute;
+    top: 3rem;
+    right: 30px;
+    width: 0;
+    height: 0;
+    background-color: #fff;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-bottom: 15px solid #000;
+  }
 }
 .card_data .capacity_remaining p {
   font-size: 0.75rem;
