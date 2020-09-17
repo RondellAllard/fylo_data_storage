@@ -1,0 +1,22 @@
+/* ================================================================
+++++++++++++++++++++++++++++Base Styling+++++++++++++++++++++++++++
+================================================================*/
+
+/* Base Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+//Base Styles
+body {
+  background: top / cover no-repeat url("../../img/bg-mobile.png");
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: $white-color;
+}

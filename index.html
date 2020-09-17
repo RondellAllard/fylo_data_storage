@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Flyo Data Storage</title>
   </head>
   <body>
-    <section class="nav_section">
-      <img src="img/logo.svg" alt="Flyo logo" />
+    <section class="card card_nav">
+      <img src="img/logo.svg" alt="Flyo logo" class="logo" />
       <nav>
         <ul>
           <li>
@@ -23,14 +23,18 @@
         </ul>
       </nav>
     </section>
-    <section class="storage_data">
+    <section class="card card_data">
       <p class="lead">You've used <b>815GB</b> of your storage</p>
-
-      <progress id="file" max="100" value="70">70%</progress>
-      <p class="bottom_range">0 GB</p>
-      <p class="top_range">1000 GB</p>
-      <div class="space_left">
-        <p><span>185</span> GB left</p>
+      <div class="progress">
+        <div class="progress-bar"></div>
+      </div>
+      <div class="range">
+        <p class="range_minimum">0 GB</p>
+        <p class="range_max">1000 GB</p>
+      </div>
+      <div class="capacity_remaining">
+        <span>185</span>
+        <p>GB left</p>
       </div>
     </section>
   </body>

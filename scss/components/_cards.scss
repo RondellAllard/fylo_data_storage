@@ -1,0 +1,88 @@
+// ================================================================
+// ++++++++++++++++++++++++++++Cards+++++++++++++++++++++++++++
+// ================================================================
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 320px;
+  max-width: 90%;
+  background-color: $main-bg-color;
+  margin: 0.5rem;
+  .logo {
+    align-self: start;
+    margin-bottom: 2rem;
+  }
+  &_nav {
+    padding: 2rem;
+    border-radius: 5px 100px 5px 5px;
+    ul {
+      display: flex;
+    }
+    ul li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style-type: none;
+      background-color: $third-bg-color;
+      border-radius: 0.5rem;
+      margin-right: 1rem;
+      padding: 10px;
+    }
+  }
+  &_data {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem;
+    border-radius: 5px 5px 5px 5px;
+    color: $white-color;
+    .lead {
+      align-self: center;
+      margin-bottom: 2rem;
+    }
+    .progress {
+      margin-bottom: 1rem;
+    }
+    .range {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 1rem;
+      height: auto;
+      &_minimum {
+        align-self: start;
+      }
+      &_max {
+        order: 1;
+        align-self: end;
+      }
+    }
+    .capacity_remaining {
+      z-index: 100;
+      position: absolute;
+      right: 50;
+      bottom: -2rem;
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      padding: 1rem;
+      border-radius: 10px;
+      background-color: $white-color;
+      border: solid #000 1px;
+      p {
+        font-size: 0.75rem;
+        color: $grayscale-color;
+        align-self: center;
+      }
+      span {
+        margin-right: 1rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: $black-color;
+      }
+    }
+  }
+}

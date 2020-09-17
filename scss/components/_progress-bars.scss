@@ -1,0 +1,20 @@
+// ================================================================
+// ++++++++++++++++++++++++++++Progress Bar+++++++++++++++++++++++++++
+// ================================================================
+
+.progress {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 1rem;
+  width: 100%;
+  background-color: $secondary-bg-color;
+  border-radius: 30px;
+  &-bar {
+    height: 75%;
+    width: 81.5%;
+    background-image: linear-gradient(to right, #ff9d97, #fd5294);
+    border-radius: 30px;
+    margin: 0.3rem;
+  }
+}
