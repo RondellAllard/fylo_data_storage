@@ -357,7 +357,10 @@ template {
 }
 
 body {
-  background: top/cover no-repeat url("../../img/bg-mobile.png");
+  background-image: url("../../img/bg-mobile.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -369,7 +372,11 @@ body {
 @media (min-width: 768px) {
   body {
     flex-direction: row;
-    background: top/cover no-repeat url("../../img/bg-desktop.png");
+    background-image: none;
+    background-color: #0c122c;
+    background-image: url("../../img/bg-desktop.png");
+    background-size: 100% 50%;
+    background-position: right bottom;
   }
 }
 
@@ -379,6 +386,11 @@ body {
   justify-content: space-around;
   background-color: #1e2c69;
   margin: 0.5rem;
+}
+@media (min-width: 768px) {
+  .card {
+    align-items: baseline;
+  }
 }
 .card .logo {
   align-self: start;
@@ -391,6 +403,7 @@ body {
 }
 @media (min-width: 768px) {
   .card_nav {
+    height: 200px;
     max-width: 320px;
     flex-grow: 1;
     margin-left: 2rem;
@@ -419,14 +432,15 @@ body {
 }
 @media (min-width: 768px) {
   .card_data {
+    height: 160px;
     width: 50%;
-    max-width: 720px;
+    max-width: 620px;
     flex-grow: 1;
-    margin-right: 2rem;
+    margin: 42px 25px 0 25px;
   }
 }
 .card_data .lead {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .card_data .lead {

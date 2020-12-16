@@ -11,7 +11,10 @@
 
 //Base Styles
 body {
-  background: top / cover no-repeat url("../../img/bg-mobile.png");
+  background-image: url("../../img/bg-mobile.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,6 +24,10 @@ body {
   color: $white-color;
   @media (min-width: $desktop-bp) {
     flex-direction: row;
-    background: top / cover no-repeat url("../../img/bg-desktop.png");
+    background-image: none;
+    background-color: #0c122c;
+    background-image: url("../../img/bg-desktop.png");
+    background-size: 100% 50%;
+    background-position: right bottom;
   }
 }
