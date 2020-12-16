@@ -441,6 +441,10 @@ body {
 }
 .card_data .lead {
   margin-bottom: 1rem;
+  font-weight: 300;
+}
+.card_data .lead b {
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .card_data .lead {
@@ -478,7 +482,7 @@ body {
 }
 @media (min-width: 768px) {
   .card_data .capacity_remaining {
-    top: -2rem;
+    top: -3rem;
     bottom: auto;
   }
   .card_data .capacity_remaining::after {
@@ -502,7 +506,7 @@ body {
 .card_data .capacity_remaining span {
   margin-right: 1rem;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #000012;
 }
 
