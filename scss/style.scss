@@ -4,3 +4,14 @@
 @import "./base_style/base";
 @import "./components/cards";
 @import "./components/progress-bars";
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 10px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
