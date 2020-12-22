@@ -357,6 +357,7 @@ template {
 }
 
 body {
+  font-family: "Raleway", sans-serif;
   background-image: url("../../img/bg-mobile.png");
   background-size: cover;
   background-position: center;
@@ -366,7 +367,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
 }
 @media (min-width: 768px) {
